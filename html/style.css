@@ -1,0 +1,82 @@
+#para{
+    font-size:large;
+}
+label{
+    font-size: xx-large;
+    font-weight: 300;
+    margin-bottom: 15px;
+    text-align: center;
+    /* color: white; */
+}
+
+.title{
+    text-align: center;
+    font-size: 50px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Sofia', serif, Georgia;
+    font-weight: bolder;
+    font-style: italic;
+}
+p{
+    color: rgb(128, 255, 125);
+    line-height: 50px;
+}
+#my-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+input{
+    height: 30px;
+    width: 500px;
+
+}
+
+div > p{
+    color: red;
+    font-size: 30px;
+}
+img{
+    width: 5%;
+    height: 5%;
+    border-radius: 50%;
+    margin: auto;
+    justify-content: center;
+    display: block;
+    position: relative;;
+    top : 30px;
+    box-shadow: /* offset-x | offset-y | blur-radius | spread-radius | color */
+            2px 2px 2px 10px rgba(0, 0, 0, 0.2);;
+}
+hr{
+    height: 20px;
+    background-color: darkgray;
+}
+body{
+    /* background-color: floralwhite; */
+    /* background-image: url(blackk.jpg); */
+}
+h1{
+    text-transform: uppercase;
+    position: fixed;
+    top: -40px;
+    width: -30px;
+}
+h3:hover{
+    color: tomato;
+}
+
+#left{
+    float: right;
+    width: 40%;
+}
+#right{
+    float: left;
+    width: 40%;
+
+}
+.Tree{
+    width: 40%;
+    float: right;
+}

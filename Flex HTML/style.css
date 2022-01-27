@@ -1,0 +1,113 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 50px 10px 50px;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo>img{
+    /* margin: 20px; */
+    margin-left: 30px;
+}    
+
+
+ul >li{
+    /* padding: 20px; */
+}
+    
+a{
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 12px;
+    color: rgb(127, 127, 127);
+    font-family: "Work Sans", sans-serif;
+
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration-color: blue;
+  padding-bottom: 6px;
+  border-bottom-style: solid;
+}
+
+button {
+    background-color: blue;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border-color: blue;
+}
+
+.bg-img{
+    background-image: url("./bgimg.jpg");
+    height: 380px;
+    width: 100%;
+}
+
+.bg-img > h1{
+    display: flex;
+    color: white;
+    justify-content: center; /* Horizontal */
+    align-items: center; /* Vertical */
+    padding-top: 100px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.section_one {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        column-gap: 20%;
+        align-items: flex-start;
+}
+
+.intro {
+        position: relative;
+        float: left;
+        margin-left: 70px;
+}
+.img_intro {
+        position: relative;
+        float: right;
+        margin-right: 50px;
+}
+.img_intro > img{
+        width: 500px;
+        height: 200px;
+}
+
+.cards {
+        display: flex;
+        column-gap: 50px;
+        flex-direction: row;
+        flex-grow: 2;
+       /* make items grow on resize */
+        align-items: stretch;
+}
+.section_two {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     /* make our flex items move as columns */
+        flex-direction: column;
+        box-shadow: 0 0 30px 5px #F7F7F7;
+        padding: 15px;
+        margin: 80px;
+}
+
+#card_para{
+            color: #F7F7F7;
+            background-color: blue;
+}
+    
