@@ -80,7 +80,40 @@ console.log(person.firstName + " " + person.secondName
 // - Array ( ) ; lenght ; concat ( ) ; index Of ( ) ; Slice ( ) ; splice ( ) ;
 // - Join ( ) ; To strings ( ) ; Includes ( ) ; las Index Of[ mark.length]
 // - is Array ( ) - unshift ( ) ; fill ; push ( ) ; pop ( ) ; Shift ( ) 
+// Fill methode
+const array1= [1,2,3,4];
+console.log(array1.fill(0,2,4));
+marks  = 99.99
+//grades from A...E
+if(marks > 100){
+  console.log('incorrect marks input');
+}
+else if(marks <= 100 && marks >=61){
+  console.log('your grade is A');
+}
+else if(marks >= 51 && marks <= 60){
+  console.log('your grade is B');
+}
+else if(marks >=41 && marks <=50){
+  console.log('your grade is C');
+}
+else if(marks >= 30 && marks <=40){
+  console.log('your marks is D');
+}
+else if( marks >=0 && marks <=29){
+  console.log('your marks is E');
+}
+else{
+  console.log('did not do exam');
+}
 
+let math = 78
+let eng = 70
+let total = math + eng
+console.log('I got math ' + math + ' i got eng ' + eng)
+console.log(`I got math ${math} i got eng ${eng}`);
+console.log('my total is ', total);
+console.log(`my total is ${math +eng}`);
 
 
 
