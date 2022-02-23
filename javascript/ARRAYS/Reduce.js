@@ -18,3 +18,9 @@ console.log(totalprice);
 // console.log(totalprice); 
 
 
+const race = "100m dash"
+
+const runners = ["Usain Bolt","Asafa Powell","Justin Gatlin"]
+
+result = runners.map((runners) => ({runners}))
+console.log(result)
