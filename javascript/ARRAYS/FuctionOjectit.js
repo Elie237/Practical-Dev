@@ -65,6 +65,10 @@ console.log(faisalinfo)
 letname ='Bavon'
 name = 'Elie'
 console.log(name)
+
+// Console.ssert
+
+
   
   
   
