@@ -1,0 +1,58 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<style>
+    .body{margin: 40px}
+    .btn-red, .btn-white,.btn-blue {font-size:35px}
+</style>
+</head>
+<body class="bg-dark text-center text-white">
+    <h1>we want to practice DOM elements</h1>
+<div class="jumbotron">
+    <button onclick="goRed()" class="btn btn-danger text-center btn-red">GO RED</button>
+</div>
+<div class="jumbotron">
+    <button onclick="goWhite()" class=" btn-white text-center btn-red">GO WHITE</button>
+</div>
+<div class="jumbotron">
+    <button  class=" btn-primary text-center btn-blue">GO BLUE</button>
+    </div>
+<div class="jumbotron">
+    <button  class=" btn-primary text-center btns">GO BLUE</button>
+    <button  class=" btn-white text-center btns">GO WHITE</button>
+    <button  class=" btn-danger text-center btns">GO RED</button>
+</div>
+<script>
+ //grab the elements(1)
+const blueBtn = document.querySelector('.btn-blue')
+const btnRed = document.querySelector('.btn-red')
+const button = document.querySelectorAll('.btns')
+ // create functions (3)
+function goRed() {
+    document.body.style.backgroundColor = "#FF0000"
+}
+// create functions (4)
+const btnWhite = document.querySelector('.btn-white')
+function goWhite() {
+    document.body.style.backgroundColor = "#FFFFFF"
+}
+function goBlue() {
+    document.body.style.backgroundColor = "#0000FF"
+}
+function goYellow() {
+    console.log(':joy:');
+    document.body.style.backgroundColor = "#FFF000"
+}
+ // events listeners(2)
+blueBtn.addEventListener('click',goBlue)
+blueBtn.addEventListener('mouseout' ,goWhite)
+button.forEach(button => button.addEventListener('click',goYellow))
+</script>
+</body>
+</html>
