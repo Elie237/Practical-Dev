@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetching github users</title>
+    <style>
+        body {
+            background-color: rgb(169, 111, 111)
+        }
+        .container {
+            margin: 30px;
+            padding-bottom: 20px;
+            text-align: center;            
+        }
+        h1{ padding: 30px;
+            text-align: center;
+        }
+        #search{
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 20%;
+            width: 80%
+        }
+        #btn-search{
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 20%;
+            background-color: rgb(151, 194, 247);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GithubSearch</h1>
+    <div class="container">
+        <label for="input"></label>
+        <input type="text" id="search" /> <button id="btn-search">Search user</button>
+        <div class="display-image">
+        </div>
+    </div>
+    <script>
+        const searchElement = document.getElementById("search")
+        const searchUsers = document.getElementById("btn-search")
+        searchUsers.addEventListener("click", function () {
+            // console.log(searchElement.value)
+            GithubSearch(searchElement.value)
+        })
+        async function GithubSearch(username) {
+            const url = `https://api.github.com/users/${username}`
+            const promise = await fetch(url)
+            const jsonData = await promise.json()
+            console.log(jsonData)
+        }
+    </script>
+</body>
+
+</html>
