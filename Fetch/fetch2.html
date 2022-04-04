@@ -1,3 +1,33 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="response" style="background-color:blue">click me</button>
+    <div id="data"></div>
+    <script>
+        //query for element
+       const btn = document.getElementById("response")
+        function fetchData(){
+            fetch('data.json')
+            .then((response) => response.text())
+            .then((data) =>
+              //console.log("data")
+        //document.getElementById("data").innerHTML = data
+        console.log(data)
+            )
+        }
+        btn.addEventListener("click",fetchData);
+        fetchData()
+    </script>
+</body>
+</html> -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,33 +62,42 @@
       // .then(function (data) {
       //   console.log(data)
       // })
-        fetch('https://content.guardianapis.com/search?q=debates&api-key=test')
+      fetch('https://content.guardianapis.com/search?q=debates&api-key=test')
         .then((response) => response.json())
         // .then((data) => console.log(data))
 
         //lets say you want to insert the data  into a web page
         .then((data) => {
           //  document.getElementById('output').innerText = data 
-        for(let d in data) {
-        for(let md in d) {
-        console.log(md[7])
-        }
-        }
-        // data.forEach((jsonData) => {
-        //   console.log(jsonData)
-        //   // document.getElementById('output').innerText = jsonData.firstName 
+          for(let d in data) {
+            for(let md in d) {
+              console.log(md[7])
+            }
+          }
+          // data.forEach((jsonData) => {
+          //   console.log(jsonData)
+          //   // document.getElementById('output').innerText = jsonData.firstName 
 
 
-        // })
-        })
+          // })
+          })
 
         //adding error messages
         .catch((error) => console.log(error))
 
     }
 
-    </script>
+  </script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
