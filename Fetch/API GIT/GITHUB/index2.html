@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    background-color: rgb(4, 29, 37);
+    color: white
+    }
+    .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+    }
+    .info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    }
+    .container2{
+    display: flex;
+    flex-direction: column;
+    }
+    .rowElements {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    column-gap: 10px;
+    }
+
+    #profile > img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    }
+    input{
+    width: 250px;
+    height: 40px;
+    }
+    #searchBtn {
+    height: 40px;
+    border: 5px solid WHITE;
+    margin-left: 10px;
+    color: #ffffff;
+    background-color: BLACK;
+    width: 100px;
+    }
+    #btnWeb > button, #btnTwitter > button {      background-color:blue;
+    height: 30px;
+    color:white;
+    }
+
+    </style>
+    </head>
+    <body>
+    <h1 class="header">GITHUB SEARCH TOOL </h1>
+    <div class="header">
+    <input type="text" id="search" placeholder="Search A user.... ">
+    <button id="searchBtn" type="button">Search  a GitHub user</button>
+    </div>
+    <p class="bio"></p>
+
+
+    <script>
+
+      const state = document.querySelector('bio');
+     //query the element
+    const searchBtn = document.getElementById("searchBtn");
+    searchBtn.addEventListener('click',function(){
+      const url = `https://api.github.com/users/${username}`
+    // console.log(e.target.value)
+
+    async function searchUser(){
+        const response = await fetch(url)
+        const jsonData = await response.json();
+
+        const img = document.createElement('img')
+        img.scr = jsonData.avatar_url
+        document.getElementById("profile").appendChild(img)
+
+
+        state.innerText = jsonData.bio
+    }
+    searchUser();
+
+    })
+   
+    
+
+    </script>
+</body>
+</html>
